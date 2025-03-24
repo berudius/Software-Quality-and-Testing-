@@ -1,7 +1,7 @@
 package org.example;
 
 /*
-@author Admin
+@author OleksandrBerkeshchuk
 @project Lab2
 @class Triangle2
 @version 1.0.0
