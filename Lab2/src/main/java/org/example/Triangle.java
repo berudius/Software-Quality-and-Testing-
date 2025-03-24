@@ -1,5 +1,14 @@
 package org.example;
 
+/*
+@author Admin
+@project Lab2
+@class Triangle2
+@version 1.0.0
+@since 3/14/2025-09.27
+*/
+
+
 import java.util.HashMap;
 import java.util.Map;
 
@@ -21,9 +30,9 @@ public class Triangle {
         double halfPerimeter = getPerimeter()/2;
         double area = Math.sqrt(
                 halfPerimeter
-                    * (halfPerimeter - triangleSides.get("AB"))
-                    * (halfPerimeter - triangleSides.get("BC"))
-                    * (halfPerimeter - triangleSides.get("CA"))
+                        * (halfPerimeter - triangleSides.get("AB"))
+                        * (halfPerimeter - triangleSides.get("BC"))
+                        * (halfPerimeter - triangleSides.get("CA"))
         );
         return area;
     }
@@ -47,7 +56,7 @@ public class Triangle {
     // 4. Рівносторонній?
     public boolean isEquilateral(){
         return triangleSides.get("AB").equals(triangleSides.get("BC"))
-               && triangleSides.get("CA").equals(triangleSides.get("AB"));
+                && triangleSides.get("CA").equals(triangleSides.get("AB"));
     }
 
     // 5. рівнобедрений?
@@ -74,14 +83,14 @@ public class Triangle {
 
         return Math.pow(triangleSides.get(largestSide), 2)
                 ==
-               Math.pow(triangleSides.get(smallestSides[0]), 2)
-                +
-               Math.pow(triangleSides.get(smallestSides[1]), 2);
+                Math.pow(triangleSides.get(smallestSides[0]), 2)
+                        +
+                        Math.pow(triangleSides.get(smallestSides[1]), 2);
     }
 
 
 
-    
+
 
     // 7. Перевірити, чи існує такий трикутник за заданими координатами
     //Якщо площа дорівнює нулю, то три точки лежать на одній прямій, і трикутника не існує.
@@ -93,7 +102,7 @@ public class Triangle {
 
     //8.
     public double getInscribedCircleRadius(){
-       return getArea()/(getPerimeter()/2);
+        return getArea()/(getPerimeter()/2);
     }
 
     //9.
@@ -101,7 +110,7 @@ public class Triangle {
         return  triangleSides.get("AB")
                 * triangleSides.get("BC")
                 * triangleSides.get("CA")
-            /(4*getArea());
+                /(4*getArea());
     }
 
     // 10
@@ -187,7 +196,7 @@ public class Triangle {
         }
         throw new IllegalArgumentException("All points must be of the 2D dimension");
     }
-    
+
     public static double getSegmentLength(double[] pointStart, double[] pointEnd){
         if(pointStart.length == DIMENSION && pointEnd.length == DIMENSION ){
 
@@ -214,3 +223,4 @@ public class Triangle {
     }
 
 }
+
